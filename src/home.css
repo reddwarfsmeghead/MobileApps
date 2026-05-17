@@ -9,6 +9,7 @@
   user-select: none;
   touch-action: manipulation;
   padding-bottom: 3rem;
+  box-sizing: border-box;
 }
 
 .arcade-header {
@@ -21,6 +22,9 @@
   letter-spacing: 0.02em;
   text-shadow: 0 2px 16px #9E7FFF33, 0 1px 0 #000;
   outline: none;
+  max-width: 98vw;
+  width: 100%;
+  overflow-wrap: break-word;
 }
 
 .arcade-intro {
@@ -30,6 +34,8 @@
   text-align: center;
   max-width: 32rem;
   outline: none;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .arcade-grid {
@@ -40,6 +46,7 @@
   max-width: 900px;
   margin: 0 auto;
   padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .arcade-game-btn {
@@ -64,6 +71,7 @@
   justify-content: center;
   white-space: normal;
   word-break: break-word;
+  box-sizing: border-box;
 }
 .arcade-game-btn:focus, .arcade-game-btn:active {
   box-shadow: 0 0 0 4px #f472b6, 0 4px 32px #9E7FFF44;
@@ -86,6 +94,9 @@
   margin-bottom: 1.2rem;
   text-align: center;
   outline: none;
+  max-width: 98vw;
+  width: 100%;
+  overflow-wrap: break-word;
 }
 .coming-soon-desc {
   font-size: 1.2rem;
@@ -96,6 +107,8 @@
   margin-left: auto;
   margin-right: auto;
   outline: none;
+  width: 100%;
+  box-sizing: border-box;
 }
 .coming-soon-msg {
   font-size: 1.3rem;
@@ -103,6 +116,7 @@
   margin-bottom: 2.5rem;
   text-align: center;
   outline: none;
+  width: 100%;
 }
 .arcade-back-btn {
   font-size: 1.2rem;
@@ -117,6 +131,9 @@
   outline: none;
   transition: box-shadow 0.2s, background 0.2s, color 0.2s;
   margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 340px;
+  box-sizing: border-box;
 }
 .arcade-back-btn:focus, .arcade-back-btn:active {
   box-shadow: 0 0 0 4px #f472b6, 0 4px 32px #9E7FFF44;
@@ -133,18 +150,50 @@
   .arcade-header {
     font-size: 1.5rem;
     margin-top: 1.2rem;
+    max-width: 98vw;
   }
   .arcade-intro {
     font-size: 1rem;
     margin-bottom: 1.5rem;
+    max-width: 98vw;
+    padding: 0 0.2rem;
   }
   .arcade-grid {
     gap: 1.2rem;
     padding: 0 0.2rem;
+    max-width: 98vw;
   }
   .arcade-game-btn {
     font-size: 1.1rem;
     padding: 1.2rem 0.7rem;
     min-height: 3.5rem;
+    border-radius: 1.2rem;
+    max-width: 98vw;
+  }
+  .coming-soon-title {
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+    max-width: 98vw;
+  }
+  .coming-soon-desc {
+    font-size: 0.98rem;
+    margin-bottom: 1rem;
+    max-width: 98vw;
+    padding: 0 0.2rem;
+  }
+  .coming-soon-msg {
+    font-size: 1.05rem;
+    margin-bottom: 1.1rem;
+    max-width: 98vw;
+  }
+  .arcade-back-btn {
+    font-size: 0.98rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 1.2rem;
+    width: 100%;
+    max-width: 98vw;
+  }
+  .home-root {
+    padding-bottom: 1.2rem;
   }
 }

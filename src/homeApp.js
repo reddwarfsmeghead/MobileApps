@@ -5,9 +5,6 @@ const GAMES = [
     id: 'dice',
     title: 'Dice Roller',
     description: 'Roll a dice and hear the result spoken aloud.',
-    onClick: (root, navigateToDice) => {
-      if (typeof navigateToDice === 'function') navigateToDice();
-    }
   },
   {
     id: 'memory',
@@ -72,7 +69,7 @@ function speak(text) {
   }
 }
 
-export function setupHomeApp(root, navigateToDice) {
+export function setupHomeApp(root, onGameSelect) {
   root.className = 'home-root';
   root.innerHTML = '';
 
@@ -115,11 +112,11 @@ export function setupHomeApp(root, navigateToDice) {
     });
 
     btn.addEventListener('click', () => {
-      if (game.id === 'dice') {
-        game.onClick(root, navigateToDice);
+      if (game.id === 'dice' || game.id === 'memory') {
+        if (typeof onGameSelect === 'function') onGameSelect(game.id);
       } else {
         speak(`${game.title} is coming soon!`);
-        showComingSoon(root, game.title, game.description, () => setupHomeApp(root, navigateToDice));
+        showComingSoon(root, game.title, game.description, () => setupHomeApp(root, onGameSelect));
       }
     });
 
